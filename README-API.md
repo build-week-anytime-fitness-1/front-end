@@ -7,6 +7,7 @@ https://build-week-anytime-fitness-1.herokuapp.com/api/auth/register
 (Instructor registration) formValues:{
     first_name: '',
     last_name: '',
+    email: '', (email type in form)
     username: '',
     password: '',
     role_id: 1    
