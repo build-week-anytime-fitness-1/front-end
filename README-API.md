@@ -20,7 +20,7 @@ https://build-week-anytime-fitness-1.herokuapp.com/api/auth/register
     password: ''    
 }
 
-Login: (not yet functional)
+Login: 
 https://build-week-anytime-fitness-1.herokuapp.com/api/auth/login
 
 (login) formValues: {
@@ -28,7 +28,7 @@ https://build-week-anytime-fitness-1.herokuapp.com/api/auth/login
     password: ''
 }
 
-Create/edit class: (not yet functional)
+Create/edit class: 
 https://build-week-anytime-fitness-1.herokuapp.com/api/classes
 
 (Create class) formValues: {
