@@ -13,7 +13,7 @@ const initialFormValues = {
   location: '',
   max_class_size: 0
 }
-
+//wow what a change
 export default function ClassCreate () {
     const [form, setForm] = useState({});
   
