@@ -1,7 +1,8 @@
 import './App.css';
-import InstructorForm from './components/InstructorForm';
-import UserForm from './Components/UserForm'; 
-import ClassCreate from './Components/classCreate';
+
+import InstructorForm from './Folder/InstructorForm';
+import UserForm from './Folder/UserForm'; 
+import ClassCreate from './Folder/ClassCreate';
 
 function App() {
   return (
