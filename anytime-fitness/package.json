@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "Cl = flase react-scripts build",
+    "build": "Cl = false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
