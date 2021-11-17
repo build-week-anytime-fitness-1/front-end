@@ -8,8 +8,8 @@ const NavBar = () => {
             <section id='nav-bar' >
                 <Link to='/'>Home</Link>
                 <Link to='/classes'>Classes</Link>
-                <Link to='/add-class'>Add class</Link>
-                <Link to='/client'>Signup</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/contact'>Contact</Link>
                 <button id='login'>Sign Up / Sign In</button>
             </section>
         </>
