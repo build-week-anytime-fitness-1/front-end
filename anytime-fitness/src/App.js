@@ -1,10 +1,9 @@
 import './App.css';
 
-import InstructorForm from './Components/InstructorForm';
-import UserForm from './Components/UserForm';
-import ClassCreate from './Components/ClassCreate';
-import { Route, Routes, Link } from 'react-router-dom';
-import Home from './Components/Home'
+import InstructorForm from './components/InstructorForm';
+import UserForm from './components/UserForm'; 
+import ClassCreate from './components/ClassCreate';
+
 function App() {
   return (
     <div className='App'>
@@ -15,4 +14,5 @@ function App() {
   );
 }
 
+ 
 export default App;
