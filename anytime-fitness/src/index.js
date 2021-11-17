@@ -11,6 +11,7 @@ import InstructorForm from './components/InstructorForm';
 import NavBar from './components/NavBar';
 import ClassPage from './components/ClassPage';
 import LoginForm from './components/Login'
+import ClassList from './components/ClassList'
 
 ReactDOM.render(
   <Router>
@@ -23,7 +24,7 @@ ReactDOM.render(
         <Route path='add-class' element={<ClassCreate />} />
         <Route path='class' element={<ClassPage/>}/>
         <Route path='login' element={<LoginForm/>}/>
-        <Route path='classes' element={<ClassPage/>}/>
+        <Route path='classes' element={<ClassList/>}/>
       </Routes>
     </React.StrictMode>
   </Router>,
