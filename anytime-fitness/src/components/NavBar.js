@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
     return (
-            <div>
+        <div>
             <nav id='nav-bar' >
                 <Link to='/'>Home</Link>
                 <Link to='/client'>Signup</Link>
@@ -14,8 +13,7 @@ const NavBar = () => {
                 <Link to='/class'>Class</Link>
             </nav>
         </div>
-    )
+    );
 }
 
 export default NavBar;
-
