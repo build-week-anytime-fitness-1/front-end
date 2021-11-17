@@ -23,6 +23,7 @@ ReactDOM.render(
         <Route path='add-class' element={<ClassCreate />} />
         <Route path='class' element={<ClassPage/>}/>
         <Route path='login' element={<LoginForm/>}/>
+        <Route path='classes' element={<ClassPage/>}/>
       </Routes>
     </React.StrictMode>
   </Router>,
