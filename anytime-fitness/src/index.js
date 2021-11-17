@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ClassCreate from './components/ClassCreate';
+import UserForm from './components/UserForm';
+import Home from './components/Home';
+import InstructorForm from './components/InstructorForm';
+import NavBar from './components/NavBar'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route index element={<Home />} />
+        <Route path='client' element={<UserForm />} />
+        <Route path='add-class' element={<ClassCreate />} />
+      </Routes>
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 

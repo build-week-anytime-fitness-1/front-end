@@ -1,19 +1,20 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
     return (
-        <>
-            <section id='nav-bar' >
+            <div>
+            <nav id='nav-bar' >
                 <Link to='/'>Home</Link>
-                <Link to='/classes'>Classes</Link>
-                <Link to='/about'>About</Link>
-                <Link to='/contact'>Contact</Link>
-                <button id='login'>Sign Up / Sign In</button>
-            </section>
-        </>
+                <Link to='/client'>Signup</Link>
+                <Link to='/add-class'>Add class</Link>
+                <Link to='/login'>login</Link>
+            </nav>
+        </div>
     )
 }
 
 export default NavBar;
+
