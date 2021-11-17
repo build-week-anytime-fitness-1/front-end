@@ -8,7 +8,8 @@ import ClassCreate from './components/ClassCreate';
 import UserForm from './components/UserForm';
 import Home from './components/Home';
 import InstructorForm from './components/InstructorForm';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import ClassPage from './components/ClassPage';
 import LoginForm from './components/Login'
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route index element={<Home />} />
         <Route path='client' element={<UserForm />} />
         <Route path='add-class' element={<ClassCreate />} />
+        <Route path='class' element={<ClassPage/>}/>
         <Route path='login' element={<LoginForm/>}/>
       </Routes>
     </React.StrictMode>
