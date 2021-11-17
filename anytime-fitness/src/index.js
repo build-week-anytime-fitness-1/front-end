@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ClassCreate from './Components/ClassCreate';
-import UserForm from './Components/UserForm';
-import Home from './Components/Home';
-import InstructorForm from './Components/InstructorForm';
-import NavBar from './Components/NavBar'
+import ClassCreate from './components/ClassCreate';
+import UserForm from './components/UserForm';
+import Home from './components/Home';
+import InstructorForm from './components/InstructorForm';
+import NavBar from './components/NavBar'
 
 ReactDOM.render(
   <Router>
