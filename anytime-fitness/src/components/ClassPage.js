@@ -70,4 +70,3 @@ function App() {
         }) }
       </div>
     );
-}
