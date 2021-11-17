@@ -4,37 +4,33 @@ import axios from "axios";
 
 
 
-
 export default function ClassPage() {
-  const [classes, setClasses] = useState([])
+  const [workout, setWorkout] = useState([])
   
-  const getClasses = () => {
-    axios.get('https://build-week-anytime-fitness-1.herokuapp.com/api/classes')
+  const getClass = () => {
+    axios.get('https://build-week-anytime-fitness-1.herokuapp.com/api/classes/7')
     .then(res => {
       console.log(res)
-      setClasses(res.data)
+      setWorkout(res.data)
     })
     .catch(error => {
       console.error(error)
     })
   }
-  
     useEffect(() => {
-      getClasses()
+      getClass()
     }, [])
     
     return (
       <div className="ClassPage">
-        <h2>Saddness is endless</h2>
-          <div key={classes.instructor_id}>
-              <p>{classes.class_name}</p>
-              <p>{classes.type}</p>
-              <p>{classes.time}</p>
-              <p>{classes.date}</p>
-              <p>{classes.duration}</p>
-              <p>{classes.intensity}</p>
-              <p>{classes.location}</p>
-              <p>{classes.max_class_size}</p>
-          </div>
+              <p>{workout.class_name}</p>
+              <p>{workout.type}</p>
+              <p>{workout.time}</p>
+              <p>{workout.date}</p>
+              <p>{workout.duration}</p>
+              <p>{workout.intensity}</p>
+              <p>{workout.location}</p>
+              <p>{workout.max_class_size}</p>
       </div>
-)};
+    );
+}
