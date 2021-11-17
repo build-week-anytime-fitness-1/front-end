@@ -1,4 +1,5 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
+
 import axios from 'axios'
 import * as yup from 'yup';
 import { Routes, Route, Link} from 'react-router-dom'
@@ -104,6 +105,16 @@ export default function ClassCreate () {
           type='date'
           name='date'
           value={form.date}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label>Attendees: 
+        <input
+          id='attendance'
+          type='checkbox'
+          name='Participation'
+          value={form.attendance}
           onChange={handleChange}
         />
       </label>
