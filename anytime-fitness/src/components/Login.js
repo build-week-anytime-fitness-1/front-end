@@ -19,9 +19,10 @@ const LoginForm = () => {
 
     const onChange = evt => {
         const { name, value } = evt.target
-        setLoginForm({ ...loginForm, name, value });
+        setLoginForm({ ...loginForm, [name]: value });
     };
 
+   
     return (
         <form id='loginForm' onSubmit={onSubmit}>
             <h2>Anytime Fitness Login</h2>
@@ -41,6 +42,7 @@ const LoginForm = () => {
                     onChange={onChange}
                 />
             </label>
+            <button id="login" type="submit">Login</button>
         </form>
     )
 }
