@@ -13,7 +13,6 @@ const initialFormValues = {
   location: '',
   max_class_size: 0
 }
-//wow what a change
 export default function ClassCreate () {
     const [form, setForm] = useState({});
   
@@ -102,6 +101,16 @@ export default function ClassCreate () {
           type='date'
           name='date'
           value={form.date}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label>Attendees: 
+        <input
+          id='attendance'
+          type='checkbox'
+          name='Participation'
+          value={form.attendance}
           onChange={handleChange}
         />
       </label>
