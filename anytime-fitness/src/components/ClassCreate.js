@@ -1,18 +1,6 @@
 import react, { useState } from 'react';
-import axios from 'axios'
-import * as yup from 'yup';
 
-const initialFormValues = {
-  class_name: '',
-  type: '',
-  instructor_id: 0,
-  time: '',
-  date: '',
-  duration: 0,
-  intensity: 0,
-  location: '',
-  max_class_size: 0
-}
+
 export default function ClassCreate () {
     const [form, setForm] = useState({});
   
