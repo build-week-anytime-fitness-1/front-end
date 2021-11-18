@@ -21,15 +21,13 @@ export default function ClassPage() {
     
     return (
       <div className="ClassPage">
-          {/* <Outlet/> */}
-              <p>{workout.class_name}</p>
-              <p>{workout.type}</p>
-              <p>{workout.time}</p>
-              <p>{workout.date}</p>
-              <p>{workout.duration}</p>
-              <p>{workout.intensity}</p>
-              <p>{workout.location}</p>
-              <p>{workout.max_class_size}</p>
+              <h2>{workout.class_name}</h2>
+              <p>Workout Type: {workout.type}</p>
+              <p>Time/Date: {workout.time}, {workout.date}</p>
+              <p>Class Duration: {workout.duration}</p>
+              <p>Intensity Level: {workout.intensity}</p>
+              <p>Workout Location: {workout.location}</p>
+              <p>Class Size: {workout.max_class_size}</p>
       </div>
     );
 }
