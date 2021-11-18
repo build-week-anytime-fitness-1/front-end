@@ -34,7 +34,7 @@ const LoginForm = () => {
                     onChange={onChange}
                 />
             </label>
-            <label>PassWord: 
+            <label>Password: 
                 <input
                     value={loginForm.password}
                     name='password'

@@ -8,7 +8,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         {<InstructorForm/>}
-          </header>
+      </header>
     </div>
   );
 }

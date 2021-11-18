@@ -26,7 +26,7 @@ export default function UserForm() {
     };
 
     return (
-        <form className='form container' onSubmit={onSubmit}>
+        <form className='signup' onSubmit={onSubmit}>
             <div>
                 <h2>Sign Up</h2>
                 <label>First Name:
@@ -69,6 +69,7 @@ export default function UserForm() {
                         onChange={onChange}
                     />
                 </label>
+                <button onSubmit={onSubmit}>Submit</button>
             </div>
         </form>
     )
