@@ -7,9 +7,11 @@ const NavBar = () => {
     return (
         <div>
             <nav id='nav-bar' >
-                <Link to='/'>home</Link>
-                <Link to='/client'>signup</Link>
-                <Link to='/login'>login</Link>
+                <Link to='/'>Home</Link>
+                <Link to='/classes'>Workouts</Link>
+                <Link to='/client'>Signup</Link>
+                <Link to='/login'>Login</Link>
+
             </nav>
         </div>
     );

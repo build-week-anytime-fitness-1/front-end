@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { useNavigate, Link, Routes, Route,  } from 'react-router-dom';
 import ClassPage from './ClassPage';
+import ClassCreate from './ClassCreate';
 
 export default function ClassList () {
 const { url } = useNavigate();
@@ -24,26 +25,28 @@ const getClasses = () => {
     }, [])
 
     return (
-        <div>
+        <div className='classList'>
             <Routes>
             <Route path=':classId' element={<ClassPage/>}/>
             </Routes>
             <h2>Classes</h2>
-            {workouts.map(workout => (
-                <div
-                className='workout-card'
-                key={workout.class_id}
-                >
+            <div className='cardList'> 
+                {workouts.map(workout => (
+                <div className='classCard' key={workout.class_id}>
                     <Link to={`/classes/${workout.class_id}`}>
-                        <h3>{workout.class_name}</h3>
+                    <h3 className='classButton'>{workout.class_name}</h3>
                     </Link>
-                    <p>{workout.time},{workout.date}</p>
-                    <p>{workout.location}</p>
-                    <p>{workout.type}</p>
-                    <p>{workout.intensity}</p>
-                    <p>{workout.duration}</p>
+                    <p>Workout Type: {workout.type}</p>
+                    <p>Time/Date: {workout.time},{workout.date}</p>
+                    <p>Class Duration: {workout.duration}</p>
+                    <p>Intensity Level: {workout.intensity}</p>
+                    <p>Location: {workout.location}</p>
                 </div>
+                
             ))}
+            </div>
+            <Link className='createButton' to={`/add-class`}>
+                <h3>Create a Class</h3></Link>
         </div>
     )
 }

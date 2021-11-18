@@ -19,7 +19,7 @@ ReactDOM.render(
       <NavBar />
       <Routes>
         <Route path='/' element={<App />} />
-           <Route index element={<Home />} /> 
+        <Route index element={<Home />} /> 
         <Route path='client' element={<UserForm />} />
         <Route path='add-class' element={<ClassCreate />} />
         <Route path='login' element={<LoginForm/>}/>

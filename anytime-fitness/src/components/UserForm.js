@@ -69,7 +69,7 @@ export default function UserForm() {
                         onChange={onChange}
                     />
                 </label>
-                <button onSubmit={onSubmit}>Submit</button>
+                <button onSubmit={onSubmit} className='submitButton'>Submit</button>
             </div>
         </form>
     )
