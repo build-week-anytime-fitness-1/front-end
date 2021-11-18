@@ -55,7 +55,7 @@ body {
     margin: 0;
     max-width:100%;
   /*put a border around everything to see where it stops and starts*/
-    /* border:1px solid grey; */
+    
   font-family: 'Open Sans', sans-serif;
   font-family: 'Lato', sans-serif;
 }
@@ -70,12 +70,12 @@ a {
   padding:0.5%;
 	margin:1%;
 	text-align: center;
-	color:;
-	width: 10%;
+	width: auto;
 	letter-spacing:3px;
 	border-radius:10px;
 	transition: 1s;
   border: 1.5px solid black;
+  padding: 0 1%;
 }
 
 a:hover {
@@ -117,16 +117,26 @@ h2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 25%;
+  width: auto;
   text-align: center;
   align-self: center;
+  padding: 2% 3%;
+  margin: 5%;
 }
-
+#login {
+  width: auto;
+  margin: 2% auto 0;
+  padding: 0 2%;
+}
+#loginForm h2 {
+  font-size: 2.25rem;
+}
 label {
   margin: 3%;
 }
 input {
   margin-left: 3%;
+  height: 20px;
 }
 
 .signup {
@@ -137,6 +147,8 @@ input {
   width: 68%;
   text-align: center;
   align-self: center;
+  padding: 2%;
+  margin: 5%;
 }
 
 .signup h2 {
@@ -147,8 +159,10 @@ input {
   display: flex;
   justify-content: center;
 }
-
-
+.submitButton {
+  width:auto;
+  padding: 1% 2%;
+}
 
 #classCreate {
   border: 1px solid black;
@@ -165,12 +179,7 @@ input {
 #classCreate label {
   margin: 1%;
 }
-button {
-  margin: 2%;
-  padding: .7%;
-  width: 20%;
-  align-self: center;
-}
+
 
 #classCreate h2 {
   margin: 2%;
@@ -197,6 +206,55 @@ button {
   padding: 1%;
 }
 
-.workout-card {
+.classList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction:column;
+}
 
+.classList h2 {
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+  width:40%;
+  text-align: center;
+  margin: 5% auto 0;
+}
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.classCard {
+  border:2px solid rgb(112,128,144, .4);
+  border-radius: 10px;
+  padding: 3%;
+  margin: 3%;
+  width: 40%;
+}
+
+.createButton {
+  text-align: center;
+  width: 30%;
+  margin: 4% 35%;
+  border:1px solid rgb(112,128,144, .8);
+  border-radius: 10px;
+  background-color: lightgray;
+  /* display: inline-block; */
+}
+
+.classButton {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.buttonList {
+  margin:auto;
+  width: 100%;
+}
+
+.buttonList button {
+  margin: 2%;
+  padding: 0 2%;
 }

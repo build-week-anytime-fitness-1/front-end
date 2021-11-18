@@ -26,8 +26,12 @@ export default function ClassPage() {
               <p>Time/Date: {workout.time}, {workout.date}</p>
               <p>Class Duration: {workout.duration}</p>
               <p>Intensity Level: {workout.intensity}</p>
-              <p>Workout Location: {workout.location}</p>
+              <p>Location: {workout.location}</p>
               <p>Class Size: {workout.max_class_size}</p>
+              <div className='buttonList'> 
+              <button>Delete</button>
+              <button>Edit</button>
+              </div>
       </div>
     );
 }
