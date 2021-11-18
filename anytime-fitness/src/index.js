@@ -19,12 +19,12 @@ ReactDOM.render(
       <NavBar />
       <Routes>
         <Route path='/' element={<App />} />
-        <Route index element={<Home />} />
+           <Route index element={<Home />} /> 
         <Route path='client' element={<UserForm />} />
         <Route path='add-class' element={<ClassCreate />} />
-        <Route path='class' element={<ClassPage/>}/>
         <Route path='login' element={<LoginForm/>}/>
-        <Route path='classes' element={<ClassList/>}/>
+        <Route path='classes/*' element={<ClassList/>} />
+        <Route path=':classId' element={<ClassPage/>}/>
       </Routes>
     </React.StrictMode>
   </Router>,
