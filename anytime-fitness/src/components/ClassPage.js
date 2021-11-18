@@ -1,28 +1,27 @@
 import ClassCreate from "./ClassCreate";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import {useParams} from 'react-router-dom'
 
 
 
 export default function ClassPage() {
   const [workout, setWorkout] = useState([])
-  
-  const getClass = () => {
-    axios.get('https://build-week-anytime-fitness-1.herokuapp.com/api/classes/7')
-    .then(res => {
-      console.log(res)
-      setWorkout(res.data)
-    })
-    .catch(error => {
-      console.error(error)
-    })
-  }
-    useEffect(() => {
-      getClass()
-    }, [])
+  const params = useParams()
+  useEffect(() => {
+        axios.get(`https://build-week-anytime-fitness-1.herokuapp.com/api/classes/${params.classId}`)
+        .then(res => {
+          console.log(res)
+          setWorkout(res.data)
+        })
+        .catch(error => {
+          console.error(error)
+        })
+    }, [params.classId])
     
     return (
       <div className="ClassPage">
+          {/* <Outlet/> */}
               <p>{workout.class_name}</p>
               <p>{workout.type}</p>
               <p>{workout.time}</p>
