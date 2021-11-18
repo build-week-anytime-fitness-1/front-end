@@ -46,24 +46,4 @@ const getClasses = () => {
             ))}
         </div>
     )
-    // return (
-    //     <div>
-    //         <h2>Classes</h2>
-    //         {workouts.map(workout => (
-    //             <div
-    //             className='workout-card'
-    //             key={workout.class_id}
-    //             >
-    //                 <Link to={`https://build-week-anytime-fitness-1.herokuapp.com/api/classes/${workout.class_id}`}>
-    //                     <h3>{workout.class_name}</h3>
-    //                 </Link>
-    //                 <p>{workout.time},{workout.date}</p>
-    //                 <p>{workout.location}</p>
-    //                 <p>{workout.type}</p>
-    //                 <p>{workout.intensity}</p>
-    //                 <p>{workout.duration}</p>
-    //             </div>
-    //         ))}
-    //     </div>
-    // )
 }
