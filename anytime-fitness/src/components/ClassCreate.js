@@ -39,8 +39,8 @@ export default function ClassCreate() {
       });
   };
   return (
-    <div>
-      <form id='classFillOut' onSubmit={handleSubmit}>
+      <form id='classCreate' onSubmit={handleSubmit}>
+        <h2>Create a Class</h2>
         <label>
           Name:
           <input
@@ -53,7 +53,7 @@ export default function ClassCreate() {
           />
         </label>
         <label>
-          Instructor ID
+          Instructor:
           <input
             name='instructor_id'
             type='number'
@@ -150,6 +150,5 @@ export default function ClassCreate() {
           Create Class
         </button>
       </form>
-    </div>
   );
 }
