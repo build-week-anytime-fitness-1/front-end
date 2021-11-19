@@ -37,7 +37,7 @@ const getClasses = () => {
                     <h3 className='classButton'>{workout.class_name}</h3>
                     </Link>
                     <p>Workout Type: {workout.type}</p>
-                    <p>Time/Date: {workout.time},{workout.date}</p>
+                    <p>Time/Date: {workout.time},{workout.date.slice(0,10)}</p>
                     <p>Class Duration: {workout.duration}</p>
                     <p>Intensity Level: {workout.intensity}</p>
                     <p>Location: {workout.location}</p>

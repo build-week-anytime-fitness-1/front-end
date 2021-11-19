@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const initialLoginValues = {
     username: '',
@@ -8,20 +9,23 @@ const initialLoginValues = {
 
 const LoginForm = () => {
     const [loginForm, setLoginForm] = useState(initialLoginValues);
-
+    const push = useNavigate()
+    
     const onSubmit = (evt) => {
         evt.preventDefault();
         axios.post(`https://build-week-anytime-fitness-1.herokuapp.com/api/auth/login`, loginForm)
-            .then(resp => { console.log(resp) })
+            .then(res => { console.log(res) 
+            localStorage.setItem('token', res.data.token);   
+        })
             .catch(error => console.log(error.response));
-        setLoginForm(initialLoginValues)
+            setLoginForm(initialLoginValues)
+        push('/classes')
     };
 
     const onChange = evt => {
         const { name, value } = evt.target
         setLoginForm({ ...loginForm, [name]: value });
     };
-
    
     return (
         <form id='loginForm' onSubmit={onSubmit}>

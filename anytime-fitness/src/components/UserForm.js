@@ -14,9 +14,12 @@ export default function UserForm() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post(`https://reqres.in/api/orders`, form)
-            .then(res => { console.log('RES', res) })
-            .catch(err => console.log(err.response));
+        axios.post('https://build-week-anytime-fitness-1.herokuapp.com/api/auth/register', form)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => (console.log(err.error)))
+        
         setForm(initialFormValues)
     };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -12,12 +12,14 @@ import NavBar from './components/NavBar';
 import ClassPage from './components/ClassPage';
 import LoginForm from './components/Login'
 import ClassList from './components/ClassList'
+import Logout from './components/Logout'
+
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <NavBar />
-      <Routes>
+      <NavBar/> 
+       <Routes>
         <Route path='/' element={<App />} />
         <Route index element={<Home />} /> 
         <Route path='client' element={<UserForm />} />
@@ -25,6 +27,7 @@ ReactDOM.render(
         <Route path='login' element={<LoginForm/>}/>
         <Route path='classes/*' element={<ClassList/>} />
         <Route path=':classId' element={<ClassPage/>}/>
+        <Route path='logout' element={<Logout/>}/>
       </Routes>
     </React.StrictMode>
   </Router>,
