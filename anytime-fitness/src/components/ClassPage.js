@@ -18,12 +18,12 @@ export default function ClassPage() {
           console.error(error)
         })
     }, [params.classId])
-    
+
     return (
       <div className="ClassPage">
               <h2>{workout.class_name}</h2>
               <p>Workout Type: {workout.type}</p>
-              <p>Time/Date: {workout.time}, {workout.date}</p>
+              <p>Time/Date: {workout.time}, {workout.date ? workout.date.slice(0, 10) : ''}</p>
               <p>Class Duration: {workout.duration}</p>
               <p>Intensity Level: {workout.intensity}</p>
               <p>Location: {workout.location}</p>
