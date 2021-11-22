@@ -18,16 +18,16 @@ import Logout from './components/Logout'
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <NavBar/> 
+      {/* <NavBar/>  */}
        <Routes>
-        <Route path='/' element={<App />} />
-        <Route index element={<Home />} /> 
-        <Route path='client' element={<UserForm />} />
+        <Route path='/*' element={<App />} />
+        {/* <Route index element={<NavBar />} />  */}
+        {/* <Route path='client' element={<UserForm />} />
         <Route path='add-class' element={<ClassCreate />} />
         <Route path='login' element={<LoginForm/>}/>
         <Route path='classes/*' element={<ClassList/>} />
         <Route path=':classId' element={<ClassPage/>}/>
-        <Route path='logout' element={<Logout/>}/>
+        <Route path='logout' element={<Logout/>}/> */}
       </Routes>
     </React.StrictMode>
   </Router>,
