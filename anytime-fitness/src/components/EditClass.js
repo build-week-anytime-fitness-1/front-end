@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import * as yup from 'yup';
+
 
 export default function EditClass() {
   const initialFormValues = {

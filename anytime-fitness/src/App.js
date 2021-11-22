@@ -18,9 +18,6 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <header className='App-header'>
-        {<InstructorForm/>}
-      </header> */}
       <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
       <Routes>
         <Route path='/' element={<Home />} />

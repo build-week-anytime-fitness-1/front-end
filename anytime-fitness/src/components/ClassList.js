@@ -33,10 +33,6 @@ export default function ClassList() {
 
   return (
     <div className='classList'>
-      {/* <Routes>
-        <Route path=':classId' element={<ClassPage />} />
-      </Routes> */}
-      
       <Outlet/>
       <h2>Classes</h2>
       <div className='cardList'>
