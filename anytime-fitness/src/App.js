@@ -36,7 +36,7 @@ function App() {
         <Route path='classes' element={<ClassList />}>
           <Route path=':classId' element={<ClassPage />} />
         </Route>
-        <Route path='edit' >
+        <Route path='edit'>
           <Route path=':editId' element={<EditClass/>}/>
           </Route>
       </Routes>

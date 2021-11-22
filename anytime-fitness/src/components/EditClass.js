@@ -46,6 +46,7 @@ console.log(params)
     axios.put(`https://build-week-anytime-fitness-1.herokuapp.com/api/classes/${params.editId}`, formValues)
       .then((res) => {
         console.log(formValues);
+        navigate('/classes')
       })
       .catch((err) => {
         console.log(err.message);
@@ -53,7 +54,7 @@ console.log(params)
   };
   return (
       <form id='classCreate' onSubmit={handleSubmit}>
-        <h2>EDITSSSSSSSssssss</h2>
+        <h2>Edit Class</h2>
         <label>
           Name:
           <input
@@ -160,7 +161,7 @@ console.log(params)
         </label>
 
         <button id='createButton' type='submit'>
-          Create Class
+          Confirm Edit
         </button>
       </form>
   );
