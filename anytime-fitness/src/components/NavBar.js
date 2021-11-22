@@ -6,9 +6,9 @@ import UserForm from './UserForm';
 import jwt_decode from "jwt-decode";
 
 
-const token = localStorage.getItem('token')
-    const decoded = jwt_decode(token);
-    console.log(decoded);
+// const token = localStorage.getItem('token')
+//     const decoded = jwt_decode(token);
+//     console.log(decoded);
 
 function NavBar({ loggedIn, setLoggedIn, token }) {
 
