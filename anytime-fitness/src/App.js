@@ -21,8 +21,8 @@ function App() {
       {/* <header className='App-header'>
         {<InstructorForm/>}
       </header> */}
-      <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-      <Routes>
+      <NavBar  />
+      {/* <Routes>
         <Route path='/' element={<Home />} />
         <Route path='client' element={<UserForm />} />
         <Route path='add-class' element={<ClassCreate />} />
@@ -39,7 +39,7 @@ function App() {
         <Route path='edit'>
           <Route path=':editId' element={<EditClass/>}/>
           </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

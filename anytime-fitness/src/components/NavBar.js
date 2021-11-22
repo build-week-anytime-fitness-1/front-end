@@ -12,9 +12,9 @@ const token = localStorage.getItem('token')
 
 function NavBar({ loggedIn, setLoggedIn, token }) {
 
-  useEffect(() => {
-    token !== null ? setLoggedIn(true) : setLoggedIn(false);
-  }, [setLoggedIn, token]);
+  // useEffect(() => {
+  //   token !== null ? setLoggedIn(true) : setLoggedIn(false);
+  // }, [setLoggedIn, token]);
 
   return (
     <div>
