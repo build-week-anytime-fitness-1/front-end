@@ -22,7 +22,7 @@ function NavBar({ loggedIn, setLoggedIn, token }) {
         <Link to='/'>Home</Link>
         <Link to='classes'>Workouts</Link>
         <Link to='client'>Signup</Link>
-        <Link to='instructor-form'>Instructor Registration</Link>
+        <Link to='instructorform'>Instructor Registration</Link>
         {!loggedIn ? (
           <Link to='login'>login</Link>
         ) : (
