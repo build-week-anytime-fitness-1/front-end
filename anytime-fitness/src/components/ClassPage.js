@@ -37,7 +37,7 @@ console.log(params)
       <div className='buttonList'>
         <button>Delete</button>
       <Link to={`/edit/${workout.class_id}`}>
-        <button>Edit</button>
+        Edit
       </Link>
       </div>
     </div>
