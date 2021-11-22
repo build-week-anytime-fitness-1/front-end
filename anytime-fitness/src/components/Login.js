@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 
 const initialLoginValues = {
     username: '',
     password: ''
 }
 
-const LoginForm = () => {
+function LoginForm (props){
     const [loginForm, setLoginForm] = useState(initialLoginValues);
     const push = useNavigate()
     
@@ -15,7 +15,9 @@ const LoginForm = () => {
         evt.preventDefault();
         axios.post(`https://build-week-anytime-fitness-1.herokuapp.com/api/auth/login`, loginForm)
             .then(res => { console.log(res) 
-            localStorage.setItem('token', res.data.token);   
+            localStorage.setItem('token', res.data.token); 
+            props.setLoggedIn(true) 
+            console.log(props.loggedIn) 
         })
             .catch(error => console.log(error.response));
             setLoginForm(initialLoginValues)
@@ -28,6 +30,8 @@ const LoginForm = () => {
     };
    
     return (
+        <div>
+            <Outlet/>
         <form id='loginForm' onSubmit={onSubmit}>
             <h2>Anytime Fitness Login</h2>
             <label>Username: 
@@ -48,6 +52,7 @@ const LoginForm = () => {
             </label>
             <button id="login" type="submit">Login</button>
         </form>
+        </div>
     )
 }
 
