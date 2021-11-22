@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
 import * as yup from 'yup';
-import { Routes, Route, Link } from 'react-router-dom';
 
 export default function ClassCreate() {
   const initialFormValues = {

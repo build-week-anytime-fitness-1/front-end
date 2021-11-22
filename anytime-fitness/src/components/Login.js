@@ -16,12 +16,11 @@ function LoginForm (props){
         axios.post(`https://build-week-anytime-fitness-1.herokuapp.com/api/auth/login`, loginForm)
             .then(res => { console.log(res) 
             localStorage.setItem('token', res.data.token); 
-            props.setLoggedIn(true) 
-            console.log(props.loggedIn) 
+            props.setLoggedIn(true)  
+            push('/classes')
         })
             .catch(error => console.log(error.response));
             setLoginForm(initialLoginValues)
-        push('/classes')
     };
 
     const onChange = evt => {

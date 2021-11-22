@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Routes, Route} from 'react-router-dom'
 
 const initialFormValues = {
     first_name: '',
@@ -31,9 +30,6 @@ export default function UserForm() {
 
     return (
         <div>
-        <Routes>
-                <Route path='client' element={<UserForm />} />
-                </Routes>
         <form className='signup' onSubmit={onSubmit}>
             <div>
                 <h2>Sign Up</h2>
