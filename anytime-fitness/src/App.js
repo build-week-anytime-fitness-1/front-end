@@ -11,14 +11,17 @@ import Logout from './components/Logout';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import EditClass from './components/EditClass';
+import jwt_decode from "jwt-decode"
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   let token = localStorage.getItem('token');
+  let decoded =''
+  token ? decoded = jwt_decode(token) : decoded = ''
 
   return (
     <div className='App'>
-      <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
+      <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} decoded={decoded} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='client' element={<UserForm />} />
@@ -29,9 +32,9 @@ function App() {
         />
         <Route path='logout' element={<Logout />} />
         <Route path='instructor-form' element={<InstructorForm />} />
-        <Route path='classes' element={<ClassList/>}/>
+        <Route path='classes' element={<ClassList decoded={decoded}/>}/>
         <Route path='classes' >
-          <Route path=':classId' element={<ClassPage />} />
+          <Route path=':classId' element={<ClassPage decoded={decoded}/>} />
         </Route>
         <Route path='edit'>
           <Route path=':editId' element={<EditClass/>}/>

@@ -10,7 +10,7 @@ import NavBar from './NavBar';
 
 
 
-export default function ClassList() {
+export default function ClassList({decoded}) {
   const { url } = useNavigate();
 
   const [workouts, setWorkouts] = useState([]);
@@ -51,9 +51,9 @@ export default function ClassList() {
           </div>
         ))}
       </div>
-      <Link className='createButton' to={`/add-class`}>
+      {decoded.role === 1 ?<Link className='createButton' to={`/add-class`}>
         <h3>Create a Class</h3>
-      </Link>
+      </Link>: ''}
          
     </div>
   );
