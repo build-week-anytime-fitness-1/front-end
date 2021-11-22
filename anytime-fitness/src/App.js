@@ -32,8 +32,8 @@ function App() {
         />
         <Route path='logout' element={<Logout />} />
         <Route path='instructor-form' element={<InstructorForm />} />
-        
-        <Route path='classes' element={<ClassList />}>
+        <Route path='classes' element={<ClassList/>}/>
+        <Route path='classes' >
           <Route path=':classId' element={<ClassPage />} />
         </Route>
         <Route path='edit'>

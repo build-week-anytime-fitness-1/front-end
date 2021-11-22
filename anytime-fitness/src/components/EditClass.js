@@ -33,7 +33,7 @@ export default function EditClass() {
       .catch((error) => {
         console.error(error);
       });
-  }, [params.classId]);
+  }, [params.editId]);
 console.log(params)
   const handleChange = (e) => {
     setFormValues({
@@ -52,6 +52,9 @@ console.log(params)
         console.log(err.message);
       });
   };
+
+  const date = formValues.date.slice(0,10)
+
   return (
       <form id='classCreate' onSubmit={handleSubmit}>
         <h2>Edit Class</h2>
@@ -144,7 +147,7 @@ console.log(params)
             id='date'
             type='date'
             name='date'
-            value={formValues.date}
+            value={date}
             onChange={handleChange}
           />
         </label>
